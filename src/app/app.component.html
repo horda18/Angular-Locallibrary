@@ -1,0 +1,31 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark p-3">
+  <a class="navbar-brand" routerLink="/catalog" style="font-size: 24px;">Local Library</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/books">Book</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/authors">Author</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/genres">Genre</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/bookinstances">BookInstance</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<router-outlet></router-outlet>
+
+<div class="container-fluid footer-control bg-dark">
+  <p>Copyright (c) Ing. Mata Juan. | Todos los derechos reservados.</p>
+</div>
+
+

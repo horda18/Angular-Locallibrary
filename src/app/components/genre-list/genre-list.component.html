@@ -1,0 +1,52 @@
+<div class="container pt-5">
+
+  <a class="btn btn-success mb-4 mt-2" routerLinkActive="active" routerLink="/genres/create">+ Genre</a>
+
+  <p *ngIf="Genre.length <= 0" class="no-data text-center">There is no genres added yet!</p>
+
+  <table datatable class="table table-bordered table-striped" *ngIf="Genre.length > 0">
+    <thead class="table-dark">
+      <tr>
+        <th class="text-center" scope="col">Name</th>
+        <th class="text-center" scope="col center">Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let genre of Genre; let i = index">
+        <td class="text-center">{{genre.name}}</td>
+        <td class="text-center edit-block">
+          <span class="edit" (click)="editGenre(genre)">
+            <button type="button" class="btn btn-success btn-sm">Edit</button>
+          </span>
+          <span class="delete" (click)="removeGenre(genre, i)">
+            <button type="button" class="btn btn-danger btn-sm">Delete</button>
+          </span>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!--<table #dataTable>
+  <thead class="table-dark">
+    <tr>
+      <th class="text-center" scope="col">Name</th>
+      <th class="text-center" scope="col center">Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let genre of Genre; let i = index">
+      <td class="text-center">{{genre.name}}</td>
+      <td class="text-center edit-block">
+        <span class="edit" (click)="editGenre(genre)">
+          <button type="button" class="btn btn-success btn-sm">Edit</button>
+        </span>
+        <span class="delete" (click)="removeGenre(genre, i)">
+          <button type="button" class="btn btn-danger btn-sm">Delete</button>
+        </span>
+      </td>
+    </tr>
+  </tbody>
+</table>-->
+
+<app-toasts class="margin-top"></app-toasts>

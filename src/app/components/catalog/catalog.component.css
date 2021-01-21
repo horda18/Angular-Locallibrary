@@ -1,0 +1,49 @@
+/*cards */
+
+.container .body-color1{
+  background-color:#339af0;
+  color: #fff;
+  border-radius: 2px 2px 0 0;
+}
+
+.container .body-color2{
+  background-color:#20c997;
+  color: #fff;
+  border-radius: 2px 2px 0 0;
+}
+
+.container .body-color3{
+  background-color: #845ef7;
+  color: #fff;
+  border-radius: 2px 2px 0 0;
+}
+
+.container .body-color4{
+  background-color: #ff922b;
+  color: #fff;
+  border-radius: 2px 2px 0 0;
+}
+
+.container .body-color5{
+  background-color: #f06595;
+  color: #fff;
+  border-radius: 2px 2px 0 0;
+}
+
+.container .p-title{
+  font-size: 1em;
+}
+
+.v-title{
+  font-size: 1.5em;
+}
+
+.card-shadow {
+  /* Add shadows to create the "card" effect */
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+}
+
+.card-shadow:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}

@@ -1,0 +1,33 @@
+<div class="container pt-5">
+  <a class="btn btn-success mb-4 mt-2" routerLinkActive="active" routerLink="/books/create">+ Book</a>
+  <!-- No data message -->
+  <p *ngIf="Books.length <= 0" class="no-data text-center">There is no book added yet!</p>
+
+  <!-- Book list -->
+  <table datatable class="table table-bordered table-striped" *ngIf="Books.length > 0">
+    <thead class="table-dark">
+      <tr>
+        <th class="text-center" scope="col">Title</th>
+        <th class="text-center" scope="col">Author</th>
+        <th class="text-center" scope="col center">Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let book of Books; let i = index">
+        <td class="text-center">{{book.title}}</td>
+        <td class="text-center">{{book.author.first_name}} {{book.author.family_name}}</td>
+        <td class="text-center edit-block">
+          <span class="edit" (click)="editBook(book)">
+            <button type="button" class="btn btn-success btn-sm">Edit</button>
+          </span>
+          <span class="delete" (click)="removeBook(book, i)">
+            <button type="button" class="btn btn-danger btn-sm">Delete</button>
+          </span>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<app-toasts class="margin-top"></app-toasts>
+

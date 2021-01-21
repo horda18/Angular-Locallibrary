@@ -1,0 +1,29 @@
+<!--<div class="row justify-content-center">
+  <div class="col-md-4 register-employee">
+  </div>
+</div>-->
+<div class="modal-body">
+  <!-- form card register -->
+  <div class="card card-outline-secondary">
+    <div class="card-header">
+      <h4 class="modal-title">Genre Update</h4>
+    </div>
+    <div class="card-body">
+      <form [formGroup]="editForm" (ngSubmit)="onSubmit()" *ngIf="editForm">
+
+        <div class="form-group">
+          <label for="inputName">Name</label>
+          <input class="form-control" type="text" formControlName="name">
+          <div class="invalid-feedback" *ngIf="submitted && myForm.name.errors?.required">
+            Name is required.
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button [disabled]="submitted" class="btn btn-success">Update</button>
+          <button [disabled]="submitted" type="button" class="btn btn-danger"
+            (click)="modal.close('Cancel')">Cancel</button>
+        </div>
+      </form>
+    </div>
+  </div><!-- form  -->
+</div>
